@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>HAPPY VALENTINES</title>
+  </head>
+  <body style="position: relative">
+    <div class="holder-2">
+      <div class="text" id="text">
+        <span id="typed"></span>
+      </div>
+      <div class="valentine">
+        <div class="bubbles">
+          <span style="--i: 15"></span>
+          <span style="--i: 23"></span>
+          <span style="--i: 17"></span>
+          <span style="--i: 15"></span>
+          <span style="--i: 26"></span>
+          <span style="--i: 22"></span>
+          <span style="--i: 13"></span>
+          <span style="--i: 11"></span>
+          <span style="--i: 18"></span>
+          <span style="--i: 24"></span>
+          <span style="--i: 22"></span>
+          <span style="--i: 28"></span>
+          <span style="--i: 14"></span>
+          <span style="--i: 17"></span>
+          <span style="--i: 21"></span>
+          <span style="--i: 29"></span>
+          <span style="--i: 19"></span>
+          <span style="--i: 10"></span>
+          <span style="--i: 16"></span>
+          <span style="--i: 17"></span>
+          <span style="--i: 27"></span>
+          <span style="--i: 13"></span>
+        </div>
+      </div>
+      <div id="photoAlbum" class="fade">
+        <div class="box">
+          <p class="albumText">OUR MEMORIES</p>
+          <span style="--i: 1"><img src="img/a.jpg" alt="" /></span>
+          <span style="--i: 2"><img src="img/b.jpg" alt="" /></span>
+          <span style="--i: 3"><img src="img/c.jpg" alt="" /></span>
+          <span style="--i: 4"><img src="img/d.jpg" alt="" /></span>
+          <span style="--i: 5"><img src="img/e.jpg" alt="" /></span>
+          <span style="--i: 6"><img src="img/f.jpg" alt="" /></span>
+          <span style="--i: 7"><img src="img/g.jpg" alt="" /></span>
+          <span style="--i: 8"><img src="img/h.jpg" alt="" /></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      const album = document.getElementById("photoAlbum");
+      const text = document.getElementById("text");
+      document.addEventListener("DOMContentLoaded", function () {
+        var typed = new Typed("#typed", {
+          strings: [
+            "<b>Hello, Solei Webb!!!</b>",
+            "My darling",
+            "My baby",
+            "My dearest, most beautiful, love of my life",
+            "This is a little gift I wanna give you. It's not much but I hope you'd love it",
+            "Happy 1st Monthsary, my love. Ever since we fell inlove with each other, every day feels so light and happy. Everything seems so bearable. I love you more and more and more every single day. I love you through ups and downs. I love you in times that you don't even know how to love yourself. I'm so glad to have you as my girlfriend. I love you!",
+            "Again, Happy 1st Monthsary.",
+          ],
+          typeSpeed: 50,
+          startDelay: 5000,
+          backDelay: 3000,
+          backspeed: 100,
+          showCursor: false,
+          onComplete: function () {
+            setTimeout(function () {
+              album.classList.toggle("fade");
+              text.classList.toggle("fade");
+            }, 1000);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
